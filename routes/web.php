@@ -20,6 +20,7 @@ Route::view('/','welcome');
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('', 'admin\HomeController@index')->name('dashboard');
     Route::get('/users', 'admin\UserController@index')->name('users.index');
+    Route::get('/users/{$id}', 'admin\UserController@edit')->name('users.edit');
 });
 Route::get('/login', 'LoginController@index');
 Route::post('/login', 'LoginController@login')->name('login');

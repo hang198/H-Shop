@@ -10,6 +10,7 @@
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Users</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('users.index') }}" class="breadcrumb-link">List Users</a></li>
                         </ol>
                     </nav>
                 </div>
@@ -24,7 +25,12 @@
         <!-- basic table  -->
         <!-- ============================================================== -->
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <a href="#" class="btn btn-space btn-success">
+                <i class="fas fa-plus"></i>
+                </a>
+
             <div class="card">
+
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered first">
@@ -52,7 +58,14 @@
                                             Customer
                                         @endif
                                     </td>
-                                    <td></td>
+                                    <td>
+                                        <a href="" class="btn btn-primary">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="" class="btn btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
